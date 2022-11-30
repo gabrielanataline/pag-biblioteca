@@ -1,0 +1,28 @@
+mat-toolbar  {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    background: var(--azul);
+    color: white;
+}
+
+.menu hr {
+    width: 5px;
+}
+
+#logout { 
+    display: flex;
+    align-items: center;      
+}
+
+#logout i {
+    margin-left: 10px;
+}
+
+span a {
+    text-decoration: none;
+    color: white;
+}
+

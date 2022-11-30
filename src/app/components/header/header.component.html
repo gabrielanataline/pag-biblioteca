@@ -1,0 +1,15 @@
+<mat-toolbar class="mat-elevetion-z8">
+    <span> <a routerLink="/home">BIBLIOTECH</a></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <i class="material-icons">menu</i>
+    </button>
+    <mat-menu #menu="matMenu" class="menu">
+        <a mat-menu-item routerLink="/home">Home</a>
+        <hr>
+        <a mat-menu-item routerLink="/livros">Livros</a>
+        <hr>
+        <a mat-menu-item routerLink="/painel">Painel de Controle</a>
+        <hr>
+        <a mat-menu-item id="logout" (click)="logout()">Sair<i class="material-icons">logout</i></a>
+    </mat-menu>
+</mat-toolbar>

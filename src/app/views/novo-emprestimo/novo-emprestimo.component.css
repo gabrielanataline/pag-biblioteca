@@ -1,0 +1,15 @@
+.container-emprestimo form{
+    display: flex;
+    flex-direction:column;
+}
+
+.container-emprestimo button{
+    background-color: var(--azul);
+}
+.container-emprestimo{
+    padding-top: 100px;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

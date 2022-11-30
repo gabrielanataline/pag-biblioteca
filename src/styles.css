@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+    box-sizing: border-box;
+}
+:root {
+    --azul: #69B2F4;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.container{
+    width: clamp(300px, 90%, 1400px);
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+
+.alert-green {
+    color: black;
+    background-color: #E6E6E6;
+    font-weight: bold;
+}
+
+.alert-red {
+    color: black;
+    background-color: #E6E6E6;
+    font-weight: bold;
+}

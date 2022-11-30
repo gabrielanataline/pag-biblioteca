@@ -1,0 +1,20 @@
+.container-detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-detalhes h2 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.container-detalhes span {
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.container-detalhes img {
+    width: 180px;
+    height: 300px;
+    margin: 0 auto;
+}

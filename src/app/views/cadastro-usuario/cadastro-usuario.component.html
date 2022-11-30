@@ -1,0 +1,28 @@
+<div class="loginContainer">
+    <div class="box-login">
+        <h2>Cadastro</h2>
+
+        <button (click)="signInByGoogle()"><img src="assets/logo/google-logo.svg" alt="logo">Continuar com o Google</button>
+
+        <form [formGroup]="formLogin">
+            <mat-form-field class="style-inputs" appearance="outline">
+                <mat-label>E-mail</mat-label>
+                <input matInput type="email" placeholder="Digite seu e-mail" formControlName="email">
+                <mat-error *ngIf="formLogin.get('email')?.getError('required')">
+                    Este campo é obrigatório
+                </mat-error>
+            </mat-form-field>
+          
+            <mat-form-field class="style-inputs" appearance="outline">
+                <mat-label>Senha: </mat-label>
+                <input matInput type="password" placeholder="Digite a sua senha" formControlName="senha">
+                <mat-error *ngIf="formLogin.get('senha')?.getError('minlength')">
+                    Obrigatório no minimo 6 dígitos
+                </mat-error>
+            </mat-form-field>
+            
+            <button mat-raised-button type="submit" (click)="signInEmailAndPassword()">Salvar</button>
+        </form>
+        <span><a routerLink="/login">Voltar para login</a></span>
+    </div>
+</div>

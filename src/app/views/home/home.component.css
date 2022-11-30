@@ -1,0 +1,22 @@
+.container-home{
+padding-top: 63px;
+}
+
+.container-bg{
+    background-image: url('/assets/banner/banner.png');
+    width: 100vw;
+    height: 43vh;
+    color: white;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.container-bg h1{
+    font-size: 60px;
+    margin-left: 50px;
+}
+
+.container h1{
+    font-size: 30px;
+}

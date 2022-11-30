@@ -1,0 +1,41 @@
+<app-header></app-header>
+<div class="container-emprestimo">
+    <h3>Editar Empréstimo</h3>
+
+    <form #formEdit="ngForm">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Leitor: </mat-label>
+            <input type="text" matInput placeholder="Leitor" name="leitor" [(ngModel)]="emprestimo.leitor" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>E-mail: </mat-label>
+            <input type="email" matInput placeholder="E-mail" name="email"  [(ngModel)]="emprestimo.email" required>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telefone: </mat-label>
+            <input type="text" matInput placeholder="Telefone" name="telefone"  [(ngModel)]="emprestimo.telefone" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Status</mat-label>
+            <mat-select name="status"  [(ngModel)]="emprestimo.status" required>
+                <mat-option disabled>Selecione uma opção: </mat-option>
+                <mat-option value="PENDENTE">PENDENTE</mat-option>
+                <mat-option value="DEVOLVIDO">DEVOLVIDO</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <!--PRECISAMOS CONF. OS LIVROS-->
+        <mat-form-field appearance="outline">
+            <mat-label>Livros</mat-label>
+            <mat-select name="livro"  [(ngModel)]="emprestimo.livro" required>
+                <mat-option disabled>Selecione um livro: </mat-option>
+                <mat-option *ngFor="let livro of livros;" [value]="livro">{{livro.titulo}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-raised-button type="submit" (click)="editarEmprestimo(formEdit)">Salvar</button>
+    </form>
+
+</div>
